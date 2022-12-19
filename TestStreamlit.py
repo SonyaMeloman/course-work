@@ -1,7 +1,7 @@
 # import module
 import streamlit as st
-#from sklearn.externals 
-import joblib
+import sklearn
+from sklearn.externals import joblib
 from sklearn.preprocessing import MinMaxScaler
 import os
 
