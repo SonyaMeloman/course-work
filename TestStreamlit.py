@@ -7,7 +7,7 @@ import os
 
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, BatchNormalization, LeakyReLU, Activation, Dropout, LSTM
-from keras.callbacks import EarlyStopping, ModelCheckpoint
+#from keras.callbacks import EarlyStopping, ModelCheckpoint
 import tensorflow as tf
 
 def Get_y():
