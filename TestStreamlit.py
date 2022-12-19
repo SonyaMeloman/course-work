@@ -1,6 +1,6 @@
 # import module
 import streamlit as st
-import joblib
+from sklearn.externals import joblib
 import os
 
 # temsorflow
