@@ -1,7 +1,7 @@
 # import module
 import streamlit as st
-from sklearn.preprocessing import MinMaxScaler
 from sklearn.externals import joblib
+from sklearn.preprocessing import MinMaxScaler
 import os
 
 # temsorflow
