@@ -13,6 +13,7 @@ from tensorflow.keras.layers import Dense, BatchNormalization, LeakyReLU, Activa
 import tensorflow as tf
 
 def Get_y():
+    # Загружаем и инициализируем
     minmax_scaler_y_ns = MinMaxScaler()
     minmax_scaler_X_ns = MinMaxScaler()
     minmax_scaler_y_ns = joblib.load('y_ns.mms')
@@ -31,12 +32,14 @@ def Get_y():
     X_temp[0, 9] = level10
     X_temp[0, 10] = level11
     X_temp[0, 11] = level12
-    st.success(X_temp)
-    #X_temp = np.ndarray(X_temp).reshape(1, -1)
+    
+    # Нормализуем вход
     X_ns = minmax_scaler_X_ns.transform(X_temp)
-
+    # Получем прогноз
     y_ns = model_ns.predict(X_ns)
+    # Обратно бреобразовываем целевую переменную
     y_ns = minmax_scaler_y_ns.inverse_transform(y_ns)
+    
     return y_ns
     
 # Title
