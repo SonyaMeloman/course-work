@@ -18,7 +18,7 @@ def Get_y():
     minmax_scaler_y_ns = joblib.load('y_ns.mms')
     minmax_scaler_X_ns = joblib.load('X_ns.mms')
     model_ns = tf.keras.models.load_model('model_ns.h5')
-    X_temp = np.ndarray()
+    X_temp = np.array(dtype=float64)
     X_temp = [level1, level2, level3, level4, level5, level6, level7, level8, level9, level10, level11, level12]
     st.success(X_temp)
     X_temp = X_temp.reshape(1, -1)
