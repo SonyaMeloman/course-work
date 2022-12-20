@@ -2,8 +2,8 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-from sklearn.externals import joblib
-from sklearn.preprocessing import MinMaxScaler
+#from sklearn.externals import joblib
+#from sklearn.preprocessing import MinMaxScaler
 import os
 
 # temsorflow
