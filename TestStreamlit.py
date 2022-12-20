@@ -13,10 +13,10 @@ from tensorflow.keras.layers import Dense, BatchNormalization, LeakyReLU, Activa
 import tensorflow as tf
 
 def Get_y():
-    #minmax_scaler_y_ns = MinMaxScaler()
-    #minmax_scaler_X_ns = MinMaxScaler()
-    #minmax_scaler_y_ns = joblib.load('y_ns.mms')
-    #minmax_scaler_X_ns = joblib.load('X_ns.mms')
+    minmax_scaler_y_ns = MinMaxScaler()
+    minmax_scaler_X_ns = MinMaxScaler()
+    minmax_scaler_y_ns = joblib.load('y_ns.mms')
+    minmax_scaler_X_ns = joblib.load('X_ns.mms')
     model_ns = tf.keras.models.load_model('model_ns.h5')
 
     X_ns = minmax_scaler_X_ns.transform([level1,
