@@ -18,7 +18,8 @@ def Get_y():
     minmax_scaler_y_ns = joblib.load('y_ns.mms')
     minmax_scaler_X_ns = joblib.load('X_ns.mms')
     model_ns = tf.keras.models.load_model('model_ns.h5')
-    X_temp = [level1, level2, level3, level4, level5, level6, level7, level8, level9, int(level10), level11, level12]
+    X_temp = [level1, level2, level3, level4, level5, level6, level7, level8, level9, level10, level11, level12]
+    st.success(X_temp)
     X_temp = np.ndarray(X_temp).reshape(1, -1)
     X_ns = minmax_scaler_X_ns.transform(X_temp)
 
@@ -40,7 +41,7 @@ level6 = st.slider('Поверхностная плотность, г/м2', 1, 1
 level7 = st.slider('Потребление смолы, г/м2', 33.80, 414.59)
 level8 = st.slider('Шаг нашивки', 0.00, 14.44)
 level9 = st.slider('Плотность нашивки', 0.0, 104.0)
-level10 = st.radio('Угол нашики 0 град', ('0', '90'), args=(0, 1))
+level10 = st.radio('Угол нашики 0 град', (['0', '90'], [0, 1]), args=(0, 1))
 level11 = st.slider('Модуль упругости при растяжении, ГПа', 64.05, 82.68)
 level12 = st.slider('Прочность при растяжении, МПа', 1036, 3849)
 
