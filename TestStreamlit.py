@@ -19,9 +19,20 @@ def Get_y():
     minmax_scaler_X_ns = joblib.load('X_ns.mms')
     model_ns = tf.keras.models.load_model('model_ns.h5')
     X_temp = np.zeros(shape=(1, 12))
-    X_temp = [level1, level2, level3, level4, level5, level6, level7, level8, level9, level10, level11, level12]
+    X_temp[0, 0] = level1
+    X_temp[0, 1] = level2
+    X_temp[0, 2] = level3
+    X_temp[0, 3] = level4
+    X_temp[0, 4] = level5
+    X_temp[0, 5] = level6
+    X_temp[0, 6] = level7
+    X_temp[0, 7] = level8
+    X_temp[0, 8] = level9
+    X_temp[0, 9] = level10
+    X_temp[0, 10] = level11
+    X_temp[0, 11] = level12
     st.success(X_temp)
-    X_temp = np.ndarray(X_temp).reshape(1, -1)
+    #X_temp = np.ndarray(X_temp).reshape(1, -1)
     X_ns = minmax_scaler_X_ns.transform(X_temp)
 
     y_ns = model_ns.predict(X_ns)
