@@ -21,7 +21,7 @@ def Get_y():
     X_temp = np.zeros(shape=(1, 12))
     X_temp = [level1, level2, level3, level4, level5, level6, level7, level8, level9, level10, level11, level12]
     st.success(X_temp)
-    X_temp = np.ndarray(X_temp).reshape(1, -1)
+    #X_temp = np.ndarray(X_temp).reshape(1, -1)
     X_ns = minmax_scaler_X_ns.transform(X_temp)
 
     y_ns = model_ns.predict(X_ns)
