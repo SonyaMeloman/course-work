@@ -44,7 +44,7 @@ def Get_y():
     
 # Title
 st.header('Приложение для прогноза матрица-наполнитель')
-st.subheader('Жуткое, но симпатичное!')
+st.subheader('Дикое, но симпатичное!')
 
 # slider
 level1 = st.slider('Плотность, кг/м3', 1731, 2208)
@@ -64,4 +64,4 @@ level12 = st.slider('Прочность при растяжении, МПа', 10
 
 # Create a button, that when clicked, shows a result
 if (st.button( 'Пересчитать' )):
-    st.success(f'Соотношение матрица-наполнитель ожидается: {Get_y()}')
+    st.success(f'Соотношение матрица-наполнитель предлагается: {Get_y()}')
