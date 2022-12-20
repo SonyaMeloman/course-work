@@ -36,7 +36,7 @@ def Get_y():
     X_ns = minmax_scaler_X_ns.transform(X_temp)
 
     y_ns = model_ns.predict(X_ns)
-    y_ns = minmax_scaler_y_ns.revers_transform(y_ns)
+    y_ns = minmax_scaler_y_ns.inverse_transform(y_ns)
     return y_ns
     
 # Title
